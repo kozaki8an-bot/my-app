@@ -47,45 +47,80 @@ footer{border-top:2px solid var(--line);padding:24px 0 48px;font-size:13px;color
 .steps{grid-template-columns:1fr 1fr}.steps div:nth-child(2){border-right:0}.steps div:nth-child(-n+2){border-bottom:2px solid var(--line)}
 .rule{grid-template-columns:1fr}
 }
+
+.sub{margin-top:18px;max-width:700px;font-size:17px}
+.sub b{background:var(--ink);color:var(--acid);padding:0 6px}
+.chan{border-bottom:2px solid var(--line);padding:12px 0;font-size:13px;letter-spacing:.06em;color:var(--mute)}
+.chan b{color:var(--ink)}
+.mirror{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:2px solid var(--line);background:#fff}
+.mirror div{padding:20px 22px;border-bottom:2px solid var(--line);border-right:2px solid var(--line);font-size:15px}
+.mirror div:nth-child(2n){border-right:0}.mirror div:nth-last-child(-n+2){border-bottom:0}
+.mirror b{display:block;font-family:Unbounded,sans-serif;font-size:15px;margin-bottom:6px}
+.mirror-end{margin-top:14px;font-family:Unbounded,sans-serif;font-weight:700;font-size:18px}
+.lock{display:inline-block;background:var(--ink);color:var(--acid);padding:2px 8px;font-size:13px}
+a.btn.ghost{background:#fff}
+dialog{margin:auto;border:2px solid var(--line);padding:0;max-width:460px;width:calc(100% - 32px);background:var(--bg);box-shadow:8px 8px 0 var(--line)}
+dialog::backdrop{background:rgba(17,17,17,.6)}
+.dlg{padding:26px}
+.dlg h3{padding-right:28px;font-family:Unbounded,sans-serif;font-size:20px;line-height:1.2;margin-bottom:6px}
+.dlg .pick{background:var(--acid);display:inline-block;padding:2px 8px;font-weight:700;margin:6px 0 16px}
+.dlg label{display:block;font-size:13px;margin:12px 0 4px;color:var(--mute)}
+.dlg input{width:100%;font:inherit;padding:12px;border:2px solid var(--line);background:#fff}
+.dlg input:focus{outline:3px solid var(--acid)}
+.dlg button{margin-top:18px;width:100%;font:inherit;font-weight:700;cursor:pointer;border:2px solid var(--line);background:var(--acid);padding:14px;box-shadow:4px 4px 0 var(--line)}
+.dlg .x{position:absolute;right:12px;top:8px;background:none;border:0;box-shadow:none;width:auto;font-size:22px;margin:0;padding:4px 8px}
+.dlg .note{font-size:12px;color:var(--mute);margin-top:12px}
+.done{display:none}.done .price{font-family:Unbounded,sans-serif;font-size:34px;margin:10px 0}
+@media(max-width:820px){.mirror{grid-template-columns:1fr}.mirror div{border-right:0!important;border-bottom:2px solid var(--line)!important}.mirror div:last-child{border-bottom:0!important}}
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Paid System · реклама, яку рахують у гривнях</span><span>Сезон: до січня</span></div></div>
 <header><div class="wrap">
 <div class="logo"><b>PAID</b> SYSTEM</div>
-<h1>Планувати на пів року не вийде. <mark>Рахувати на тиждень — вийде.</mark></h1>
-<p class="lead">Не передавайте нам весь маркетинг. <b>Оберіть одну задачу</b> з прайсу нижче, ми запустимо її, і ви побачите цифри. Сподобається — підемо далі, а сума тесту піде в оплату першого місяця.</p>
+<h1>В Україні немає «плану на пів року». <mark>Є тиждень і цифри.</mark></h1>
+<p class="lead sub">Курс, логістика, тарифи, світло, сезон: усе змінюється швидше, ніж закінчується контракт із маркетинговою агенцією. <b>Тому ми не просимо 6 місяців.</b> Беремо одну задачу з вашого бізнесу, запускаємо за кілька днів і показуємо, скільки вона принесла гривень.</p>
 <div class="days">До Чорної п'ятниці: <span id="d">52</span> днів</div>
 </div></header>
 
+<div class="chan"><div class="wrap">Купуємо трафік там, де сидить ваш покупець: <b>Instagram · Facebook · Google · TikTok</b></div></div>
 <main class="wrap">
+<h2>Впізнаєте себе?</h2>
+<div class="mirror">
+ <div><b>«Підпишіть на 6 місяців»</b>А ви не знаєте, яким буде курс і попит у листопаді.</div>
+ <div><b>Звіт красивий, продажів нема</b>Охоплення, кліки, лайки. А замовлень стільки ж, скільки було.</div>
+ <div><b>Сезон уже почався</b>Покупці шукають подарунки й знижки, а підрядник «ще тестує».</div>
+ <div><b>Маржа тане</b>Дорожчає все, і кожна гривня реклами має окупитись, а не «працювати на бренд».</div>
+</div>
+<p class="mirror-end">Ми працюємо в тій самій реальності, що й ви. Тому рахуємо гривні, а не охоплення.</p>
+
 <h2>Прайс · оберіть одну позицію</h2>
 <div class="menu">
  <div class="row"><div class="n">01</div>
   <div class="t">Тест на 1 товар<small>Реклама на один товар, 3 креативи, сторінка під нього</small></div>
   <div class="m"><i>Строк / метрика</i>7–10 днів · CPA</div>
   <div class="p">10 000 грн<small>+ рекламний бюджет</small></div>
-  <a class="btn" href="#tg" data-offer="Тест на 1 товар">Обрати →</a></div>
+  <a class="btn" href="#form" data-offer="Тест на 1 товар">Обрати →</a></div>
  <div class="row"><div class="n">02</div>
   <div class="t">Чорна п'ятниця під ключ<small>Оффер, креативи, реклама й ремаркетинг до 27.11</small></div>
   <div class="m"><i>Строк / метрика</i>до кінця листопада · ROAS</div>
-  <div class="p"><span class="ph">XX XXX грн</span><small>+ рекламний бюджет</small></div>
-  <a class="btn" href="#tg" data-offer="Чорна п'ятниця під ключ">Обрати →</a></div>
+  <div class="p"><span class="lock">🔒 ціна після заявки</span><small>+ рекламний бюджет</small></div>
+  <a class="btn ghost" href="#form" data-offer="Чорна п'ятниця під ключ">Дізнатись ціну →</a></div>
  <div class="row"><div class="n">03</div>
   <div class="t">Паралельний тест<small>Ваш підрядник працює як працював. Ми беремо один товар і порівнюємо CPA</small></div>
   <div class="m"><i>Строк / метрика</i>14 днів · CPA проти CPA</div>
   <div class="p">10 000 грн<small>+ рекламний бюджет</small></div>
-  <a class="btn" href="#tg" data-offer="Паралельний тест">Обрати →</a></div>
+  <a class="btn ghost" href="#form" data-offer="Паралельний тест">Дізнатись ціну →</a></div>
  <div class="row"><div class="n">04</div>
   <div class="t">Повернення бази<small>Реклама й повідомлення старим покупцям, повторні продажі</small></div>
   <div class="m"><i>Строк / метрика</i>7–14 днів · повторні замовлення</div>
-  <div class="p"><span class="ph">XX XXX грн</span><small>+ рекламний бюджет</small></div>
-  <a class="btn" href="#tg" data-offer="Повернення бази">Обрати →</a></div>
+  <div class="p"><span class="lock">🔒 ціна після заявки</span><small>+ рекламний бюджет</small></div>
+  <a class="btn ghost" href="#form" data-offer="Повернення бази">Дізнатись ціну →</a></div>
  <div class="row"><div class="n">05</div>
   <div class="t">Відновлення реклами<small>Одна кампанія просіла. Новий підхід і контрольований перезапуск</small></div>
   <div class="m"><i>Строк / метрика</i>14 днів · CPA до і після</div>
-  <div class="p"><span class="ph">XX XXX грн</span><small>+ рекламний бюджет</small></div>
-  <a class="btn" href="#tg" data-offer="Відновлення реклами">Обрати →</a></div>
+  <div class="p"><span class="lock">🔒 ціна після заявки</span><small>+ рекламний бюджет</small></div>
+  <a class="btn ghost" href="#form" data-offer="Відновлення реклами">Дізнатись ціну →</a></div>
 </div>
 
 <h2>Як це працює</h2>
@@ -102,14 +137,48 @@ footer{border-top:2px solid var(--line);padding:24px 0 48px;font-size:13px;color
 </section>
 </main>
 
-<footer><div class="wrap" id="tg">Натискаєте «Обрати» → відкривається Telegram із вашою позицією. Відповідаємо протягом робочого дня. ❓ посилання на Telegram додамо.</div></footer>
+<footer><div class="wrap">Paid System · Україна. Відповідаємо протягом робочого дня.</div></footer>
+
+<dialog id="form"><div class="dlg" style="position:relative">
+ <button class="x" type="button" id="close" aria-label="Закрити">×</button>
+ <form id="f">
+  <h3>Залиште контакти, і ми одразу напишемо</h3>
+  <div class="pick" id="pick"></div>
+  <label for="name">Ім'я</label><input id="name" required autocomplete="name" placeholder="Як до вас звертатись">
+  <label for="phone">Телефон</label><input id="phone" required type="tel" autocomplete="tel" placeholder="+380…">
+  <label for="niche">Що продаєте</label><input id="niche" required placeholder="Наприклад: жіночий одяг, товари для дому">
+  <label for="site">Сайт або Instagram <span>(необов'язково)</span></label><input id="site" placeholder="https://…">
+  <button type="submit">Надіслати</button>
+  <p class="note">Без розсилок. Телефон потрібен лише щоб зв'язатися щодо цієї заявки.</p>
+ </form>
+ <div class="done" id="done">
+  <h3>Дякуємо, заявку отримано</h3>
+  <div class="pick" id="pick2"></div>
+  <div class="price" id="price"></div>
+  <p id="pnote"></p>
+  <p class="note">Хочете швидше? Напишіть нам у Telegram: <a id="tglink" href="#">відкрити чат</a></p>
+ </div>
+</div></dialog>
 
 <script>
-var d=Math.max(0,Math.ceil((new Date('2026-11-27T00:00:00')-new Date())/864e5));
-document.getElementById('d').textContent=d;
-document.querySelectorAll('[data-offer]').forEach(function(a){
- a.href='https://t.me/TELEGRAM_USERNAME?text='+encodeURIComponent('Привіт! Цікавить: '+a.dataset.offer);
-});
+var PRICES={'Тест на 1 товар':'10 000 грн','Чорна п\'ятниця під ключ':null,'Паралельний тест':'10 000 грн','Повернення бази':null,'Відновлення реклами':null};
+var dlg=document.getElementById('form'),cur='';
+document.getElementById('d').textContent=Math.max(0,Math.ceil((new Date('2026-11-27T00:00:00')-new Date())/864e5));
+document.querySelectorAll('[data-offer]').forEach(function(a){a.addEventListener('click',function(e){
+ e.preventDefault();cur=a.dataset.offer;
+ document.getElementById('pick').textContent='Позиція: '+cur;
+ document.getElementById('f').style.display='block';document.getElementById('done').style.display='none';
+ dlg.showModal();});});
+document.getElementById('close').onclick=function(){dlg.close()};
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();
+ /* ❓ тут буде відправка заявки (Telegram-бот / Google Sheets / CRM) */
+ var pr=PRICES[cur];
+ document.getElementById('pick2').textContent='Позиція: '+cur;
+ document.getElementById('price').textContent=pr?pr+' + рекламний бюджет':'Ціну надішлемо протягом дня';
+ document.getElementById('pnote').textContent=pr?'Сума тесту зараховується в оплату першого місяця, якщо підемо далі.':'Підберемо під ваш товар і сезон.';
+ document.getElementById('tglink').href='https://t.me/TELEGRAM_USERNAME?text='+encodeURIComponent('Привіт! Заявка: '+cur);
+ document.getElementById('f').style.display='none';document.getElementById('done').style.display='block';});
 </script>
 </body>
 </html>
